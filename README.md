@@ -1,4 +1,13 @@
-# add modbus
+# add modbus rtu
+ubuntu 先打开串口 sudo chmod 777 /dev/ttyS* 
+	ttyS*表示串口
+	ttyUSB* 表示usb接口
+一次性永久打开串口 
+	sudo gedit /etc/udev/rules.d/70-ttyusb.rules
+	添加KERNEL=="ttyUSB[0-9]*", MODE="0666"
+	
+
+# add modbus tcp
 
 salve 需要与PLC的一致 并且不重复，
 
